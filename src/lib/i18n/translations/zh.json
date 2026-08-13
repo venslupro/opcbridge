@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "title": "OPC Bridge — OPC 实验性项目官方展示平台",
+    "description": "OPC 实验性项目官方展示平台：AI 智能决策、图世界模型、智慧轻轨监测与维保排障应用。"
+  },
+  "nav": {
+    "projects": "项目展示",
+    "contact": "联系我们",
+    "invest": "投资合作"
+  },
+  "hero": {
+    "badge": "OPC 实验性项目计划",
+    "titleLine1": "连接智能",
+    "titleLine2": "与基础设施",
+    "subtitle": "四大旗舰项目融合 AI、知识图谱与端边云协同计算，致力于重新定义轨道交通及更多领域的决策智能。",
+    "ctaPrimary": "探索项目",
+    "ctaSecondary": "合作共赢",
+    "stats": [
+      { "value": "4", "label": "旗舰项目" },
+      { "value": "3", "label": "核心技术领域" },
+      { "value": "24/7", "label": "全天候智能监测" },
+      { "value": "全球", "label": "投资合作网络" }
+    ]
+  },
+  "projects": {
+    "sectionBadge": "旗舰项目组合",
+    "sectionTitle": "OPC 实验性项目",
+    "sectionSubtitle": "每个项目都展示了一项可落地的核心能力——从数据融合平台到现场服务智能体，旨在吸引全球投资。",
+    "keyFeatures": "核心特性",
+    "download": "下载",
+    "tabImage": "图片",
+    "tabVideo": "视频"
+  },
+  "contact": {
+    "badge": "投资与合作",
+    "title": "携手共创未来",
+    "subtitle": "我们正在寻求全球投资者与战略合作伙伴，共同加速 OPC 实验性项目的落地。欢迎就投资机会、试点项目与合作模式与我们联系。",
+    "emailLabel": "联系邮箱",
+    "cta": "开启对话"
+  },
+  "footer": {
+    "tagline": "OPC 实验性项目官方展示平台。",
+    "rights": "版权所有。"
+  },
+  "languageSwitcher": {
+    "label": "语言"
+  }
+}
