@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "title": "OPC Bridge — Experimental OPC Initiatives Showcase",
+    "description": "The official showcase platform for OPC experimental initiatives: AI decision intelligence, graph world models, smart rail monitoring, and maintenance agents."
+  },
+  "nav": {
+    "projects": "Projects",
+    "contact": "Contact",
+    "invest": "Invest With Us"
+  },
+  "hero": {
+    "badge": "OPC Experimental Initiatives",
+    "titleLine1": "Bridging Intelligence",
+    "titleLine2": "and Infrastructure",
+    "subtitle": "Four flagship projects fusing AI, knowledge graphs, and edge-cloud computing — engineered to redefine decision intelligence for the railway industry and beyond.",
+    "ctaPrimary": "Explore Projects",
+    "ctaSecondary": "Partner With Us",
+    "stats": [
+      { "value": "4", "label": "Flagship Projects" },
+      { "value": "3", "label": "Core Technology Domains" },
+      { "value": "24/7", "label": "Intelligent Monitoring" },
+      { "value": "Global", "label": "Investment Reach" }
+    ]
+  },
+  "projects": {
+    "sectionBadge": "Flagship Portfolio",
+    "sectionTitle": "Experimental OPC Projects",
+    "sectionSubtitle": "Each project demonstrates a production-ready capability — from data fusion platforms to field-service agents — built to attract global investment.",
+    "keyFeatures": "Key Features",
+    "download": "Download",
+    "tabImage": "Image",
+    "tabVideo": "Video"
+  },
+  "contact": {
+    "badge": "Investment & Partnership",
+    "title": "Let's Build the Future Together",
+    "subtitle": "We are seeking global investors and strategic partners to accelerate our experimental OPC initiatives. Reach out to discuss investment opportunities, pilots, and collaborations.",
+    "emailLabel": "Contact Email",
+    "cta": "Start a Conversation"
+  },
+  "footer": {
+    "tagline": "The official showcase platform for OPC experimental initiatives.",
+    "rights": "All rights reserved."
+  },
+  "languageSwitcher": {
+    "label": "Language"
+  }
+}
