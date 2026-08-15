@@ -80,6 +80,9 @@ export async function buildMetadata(locale: Locale): Promise<Metadata> {
       canonical: `/${locale}`,
       languages: alternatesLanguages,
     },
+    verification: {
+      google: 'w4jJfM2FK6kCLlmnpZdnVa17ByyfQmDT8Q5WFxUMT9U',
+    },
   };
 }
 
