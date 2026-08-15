@@ -1,7 +1,5 @@
-import { getContactEmail, getSiteUrl } from '@/lib/env';
-
 export const SITE_NAME = 'OPC Bridge';
 
-export const CONTACT_EMAIL: string = getContactEmail();
+export const CONTACT_EMAIL = 'venslu.pro@gmail.com';
 
-export const SITE_URL: string = getSiteUrl();
+export const SITE_URL = 'https://opcbridge.vercel.app';
