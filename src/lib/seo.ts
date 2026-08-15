@@ -49,7 +49,7 @@ export async function buildMetadata(locale: Locale): Promise<Metadata> {
       description,
       images: [
         {
-          url: '/og-image.png',
+          url: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=630&q=80&auto=format&fit=crop',
           width: 1200,
           height: 630,
           alt: SITE_NAME,
@@ -60,7 +60,9 @@ export async function buildMetadata(locale: Locale): Promise<Metadata> {
       card: 'summary_large_image',
       title,
       description,
-      images: ['/og-image.png'],
+      images: [
+        'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=630&q=80&auto=format&fit=crop',
+      ],
       creator: '@venslupro',
     },
     robots: {
@@ -77,9 +79,6 @@ export async function buildMetadata(locale: Locale): Promise<Metadata> {
     alternates: {
       canonical: `/${locale}`,
       languages: alternatesLanguages,
-    },
-    icons: {
-      icon: '/favicon.ico',
     },
   };
 }
