@@ -16,13 +16,16 @@ export function Hero({ locale, hero }: HeroProps) {
       </div>
       <div className="container hero-content">
         <span className="hero-badge animate-fade-up">{hero.badge}</span>
-        <h1 className="hero-title animate-fade-up delay-1">
+        <div className="hero-logo-wrapper animate-fade-up delay-1">
+          <img src="/icon.svg" alt="OPC Bridge" className="hero-logo" width="120" height="120" />
+        </div>
+        <h1 className="hero-title animate-fade-up delay-2">
           {hero.titleLine1}
           <br />
           <span className="gradient-text">{hero.titleLine2}</span>
         </h1>
-        <p className="hero-subtitle animate-fade-up delay-2">{hero.subtitle}</p>
-        <div className="hero-cta animate-fade-up delay-3">
+        <p className="hero-subtitle animate-fade-up delay-3">{hero.subtitle}</p>
+        <div className="hero-cta animate-fade-up delay-4">
           <CTAButton href={`/${locale}#projects`} variant="primary" size="lg">
             {hero.ctaPrimary}
           </CTAButton>
@@ -30,7 +33,7 @@ export function Hero({ locale, hero }: HeroProps) {
             {hero.ctaSecondary}
           </CTAButton>
         </div>
-        <dl className="hero-stats animate-fade-up delay-4">
+        <dl className="hero-stats animate-fade-up delay-5">
           {hero.stats.map((stat) => (
             <div key={stat.label} className="hero-stat">
               <dt className="hero-stat-label">{stat.label}</dt>
