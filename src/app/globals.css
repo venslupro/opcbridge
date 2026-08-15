@@ -81,6 +81,10 @@ ul {
   animation-delay: 0.4s;
 }
 
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
 .gradient-text {
   background: var(--gradient-primary);
   -webkit-background-clip: text;
@@ -128,6 +132,17 @@ ul {
 .logo-mark {
   color: var(--color-primary);
   font-size: 1.3rem;
+}
+
+.logo-image {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-image {
+  transform: scale(1.05);
 }
 
 .nav {
@@ -321,6 +336,31 @@ ul {
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.hero-logo-wrapper {
+  margin: 24px auto 0;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo {
+  width: 120px;
+  height: 120px;
+  filter: drop-shadow(0 12px 32px rgba(14, 165, 233, 0.35));
+  animation: logo-float 4s ease-in-out infinite;
+}
+
+@keyframes logo-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 .hero-title {
@@ -687,9 +727,17 @@ ul {
 }
 
 .footer-brand {
-  display: grid;
-  gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
   font-weight: 700;
+}
+
+.footer-brand .logo-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
 }
 
 .footer-tagline {

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="50%" stop-color="#1e5fa8"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="glow-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="bridge-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#7dd3fc"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0ea5e9" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <polygon points="100,10 178,55 178,145 100,190 22,145 22,55" fill="url(#bg-grad)" filter="url(#shadow)"/>
+  <polygon points="100,20 170,60 170,140 100,180 30,140 30,60" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.5" filter="url(#glow)"/>
+  <circle cx="60" cy="55" r="3" fill="#38bdf8" filter="url(#glow)"/>
+  <circle cx="100" cy="40" r="3" fill="#38bdf8" filter="url(#glow)"/>
+  <circle cx="140" cy="55" r="3" fill="#38bdf8" filter="url(#glow)"/>
+  <line x1="60" y1="55" x2="100" y2="40" stroke="#38bdf8" stroke-width="1.2" opacity="0.6"/>
+  <line x1="100" y1="40" x2="140" y2="55" stroke="#38bdf8" stroke-width="1.2" opacity="0.6"/>
+  <text x="100" y="72" font-family="Arial Black, Arial, sans-serif" font-size="24" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">OPC</text>
+  <line x1="50" y1="95" x2="70" y2="130" stroke="url(#bridge-grad)" stroke-width="1.5" opacity="0.9"/>
+  <line x1="70" y1="95" x2="85" y2="130" stroke="url(#bridge-grad)" stroke-width="1.5" opacity="0.9"/>
+  <line x1="115" y1="95" x2="130" y2="130" stroke="url(#bridge-grad)" stroke-width="1.5" opacity="0.9"/>
+  <line x1="130" y1="95" x2="150" y2="130" stroke="url(#bridge-grad)" stroke-width="1.5" opacity="0.9"/>
+  <path d="M 40 80 Q 100 115 160 80" fill="none" stroke="url(#bridge-grad)" stroke-width="2" filter="url(#glow)"/>
+  <line x1="40" y1="80" x2="40" y2="140" stroke="#e0f2fe" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="160" y1="80" x2="160" y2="140" stroke="#e0f2fe" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="35" y1="138" x2="165" y2="138" stroke="#e0f2fe" stroke-width="3" stroke-linecap="round" filter="url(#glow)"/>
+  <circle cx="40" cy="138" r="2.5" fill="#fde047" filter="url(#glow)"/>
+  <circle cx="100" cy="138" r="3.5" fill="#fde047" filter="url(#glow)"/>
+  <circle cx="160" cy="138" r="2.5" fill="#fde047" filter="url(#glow)"/>
+  <line x1="40" y1="138" x2="100" y2="138" stroke="#fde047" stroke-width="1" opacity="0.6"/>
+  <line x1="100" y1="138" x2="160" y2="138" stroke="#fde047" stroke-width="1" opacity="0.6"/>
+  <text x="55" y="165" font-family="monospace" font-size="8" fill="#38bdf8" opacity="0.7">10110</text>
+  <text x="92" y="172" font-family="monospace" font-size="8" fill="#38bdf8" opacity="0.7">01011</text>
+  <text x="135" y="165" font-family="monospace" font-size="8" fill="#38bdf8" opacity="0.7">11001</text>
+  <circle cx="35" cy="70" r="1.5" fill="#7dd3fc" opacity="0.8"/>
+  <circle cx="165" cy="70" r="1.5" fill="#7dd3fc" opacity="0.8"/>
+  <circle cx="30" cy="100" r="1.5" fill="#7dd3fc" opacity="0.6"/>
+  <circle cx="170" cy="100" r="1.5" fill="#7dd3fc" opacity="0.6"/>
+  <circle cx="28" cy="120" r="1.5" fill="#7dd3fc" opacity="0.4"/>
+  <circle cx="172" cy="120" r="1.5" fill="#7dd3fc" opacity="0.4"/>
+</svg>
