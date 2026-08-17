@@ -87,6 +87,8 @@ export const PROJECTS: Project[] = [
     },
     downloadLink: '/assets/downloads/smart-light-rail-solution.pptx',
     downloadLabel: { en: 'Solution Deck (PPT)', zh: '解决方案 (PPT)' },
+    siteLink: 'https://smartail.vercel.app/',
+    siteLinkLabel: { en: 'Visit Project Homepage', zh: '访问项目主页' },
   },
   {
     id: 'maintenance-app',
