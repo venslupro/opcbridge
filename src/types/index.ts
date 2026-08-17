@@ -19,6 +19,8 @@ export interface Project {
   media: ProjectMedia;
   downloadLink: string;
   downloadLabel: LocalizedString;
+  siteLink?: string;
+  siteLinkLabel?: LocalizedString;
 }
 
 export interface HeroStat {
@@ -51,6 +53,7 @@ export interface Dictionary {
     sectionSubtitle: string;
     keyFeatures: string;
     download: string;
+    visitSite: string;
     tabImage: string;
     tabVideo: string;
   };
