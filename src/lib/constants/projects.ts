@@ -29,6 +29,8 @@ export const PROJECTS: Project[] = [
     },
     downloadLink: '/assets/downloads/ai-decision-whitepaper.pdf',
     downloadLabel: { en: 'White Paper (PDF)', zh: '白皮书 (PDF)' },
+    siteLink: 'https://ontodecide.vercel.app/',
+    siteLinkLabel: { en: 'Visit Project Homepage', zh: '访问项目主页' },
   },
   {
     id: 'graph-world-model',
