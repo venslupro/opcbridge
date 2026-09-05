@@ -36,8 +36,8 @@ export const PROJECTS: Project[] = [
     id: 'graph-world-model',
     index: '02',
     title: {
-      en: 'Graph World Model Construction',
-      zh: '图世界模型构建',
+      en: 'Graph World Model',
+      zh: '图世界模型',
     },
     tagline: {
       en: 'General-purpose graph world model — the foundation of future AI',
