@@ -17,15 +17,7 @@ interface MediaTab {
 }
 
 function renderImage(src: string, alt: string): ReactElement {
-  return (
-    <img
-      className="media-image"
-      src={src}
-      alt={alt}
-      loading="lazy"
-      decoding="async"
-    />
-  );
+  return <img className="media-image" src={src} alt={alt} loading="lazy" decoding="async" />;
 }
 
 function renderVideo(src: string, alt: string): ReactElement {
@@ -84,23 +76,22 @@ export function MediaViewer({
 
   const videoTab: MediaTab | undefined = hasVideo
     ? {
-      type: 'video',
-      label: tabVideo,
-      render: renderVideo,
-    }
+        type: 'video',
+        label: tabVideo,
+        render: renderVideo,
+      }
     : undefined;
 
   const tabs: readonly MediaTab[] = [imageTab, videoTab].filter(
     (t): t is MediaTab => t !== undefined,
   );
 
-  const activeMedia: MediaTab | undefined =
-    tabs.find((t) => t.type === tab) ?? tabs[0];
+  const activeMedia: MediaTab | undefined = tabs.find((t) => t.type === tab) ?? tabs[0];
 
-  const activeSrc =
-    activeMedia?.type === 'video' ? pickFirst(videos) : pickFirst(images);
+  const activeSrc = activeMedia?.type === 'video' ? pickFirst(videos) : pickFirst(images);
 
-  const renderer = registryOverride?.[activeMedia?.type ?? 'image'] ??
+  const renderer =
+    registryOverride?.[activeMedia?.type ?? 'image'] ??
     DEFAULT_REGISTRY[activeMedia?.type ?? 'image'];
 
   if (activeMedia === undefined || activeSrc === undefined || renderer === undefined) {
