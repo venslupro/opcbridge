@@ -12,12 +12,12 @@
     "badge": "OPC Experimental Initiatives",
     "titleLine1": "Bridging Intelligence",
     "titleLine2": "and Infrastructure",
-    "subtitle": "Four flagship projects fusing AI, knowledge graphs, and edge-cloud computing — engineered to redefine decision intelligence for the railway industry and beyond.",
+    "subtitle": "Four flagship projects spanning multi-source data fusion, graph world models, orbital space computing, and end-edge-cloud rail monitoring — from rail tracks to low Earth orbit, redefining decision intelligence and next-generation compute infrastructure.",
     "ctaPrimary": "Explore Projects",
     "ctaSecondary": "Partner With Us",
     "stats": [
       { "value": "4", "label": "Flagship Projects" },
-      { "value": "3", "label": "Core Technology Domains" },
+      { "value": "4", "label": "Core Technology Domains" },
       { "value": "24/7", "label": "Intelligent Monitoring" },
       { "value": "Global", "label": "Investment Reach" }
     ]
