@@ -2,7 +2,7 @@
 
 > Official showcase platform for OPC experimental initiatives.
 
-OPC Bridge is a bilingual (Chinese / English) marketing website that showcases four flagship experimental projects spanning AI decision intelligence, graph world models, smart rail monitoring, and field-service maintenance agents. The site is built with Next.js and TypeScript, and is hosted on Vercel.
+OPC Bridge is a bilingual (Chinese / English) marketing website that showcases four flagship experimental projects spanning AI decision intelligence, graph world models, space computing, and smart rail monitoring. The site is built with Next.js and TypeScript, and is hosted on Vercel.
 
 ## Features
 

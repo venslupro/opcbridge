@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "OPC Bridge — OPC 实验性项目官方展示平台",
-    "description": "OPC 实验性项目官方展示平台：AI 智能决策、图世界模型、智慧轻轨监测与维保排障应用。"
+    "description": "OPC 实验性项目官方展示平台：AI 智能决策、图世界模型、太空计算技术与智慧轻轨监测。"
   },
   "nav": {
     "projects": "项目展示",
@@ -25,7 +25,7 @@
   "projects": {
     "sectionBadge": "旗舰项目组合",
     "sectionTitle": "OPC 实验性项目",
-    "sectionSubtitle": "每个项目都展示了一项可落地的核心能力——从数据融合平台到现场服务智能体，旨在吸引全球投资。",
+    "sectionSubtitle": "每个项目都展示了一项可落地的核心能力——从数据融合平台到太空算力网络，旨在吸引全球投资。",
     "keyFeatures": "核心特性",
     "download": "下载",
     "visitSite": "访问主页",

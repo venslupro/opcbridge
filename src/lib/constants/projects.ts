@@ -62,8 +62,49 @@ export const PROJECTS: Project[] = [
     downloadLabel: { en: 'White Paper (PDF)', zh: '白皮书 (PDF)' },
   },
   {
-    id: 'smart-light-rail',
+    id: 'space-computing',
     index: '03',
+    title: {
+      en: 'Space Computing Technology',
+      zh: '太空计算技术',
+    },
+    tagline: {
+      en: 'Building orbital compute power — data centers in space',
+      zh: '构建在轨算力——把数据中心送上太空',
+    },
+    description: {
+      en: 'A space computing solution that moves the data center into orbit. Satellite constellations carry radiation-hardened AI chips powered by solar energy and cooled by deep space, linked by inter-satellite lasers into an orbital compute network — processing data at the source and sending back only results, free of the energy, cooling, and bandwidth limits of ground-based compute.',
+      zh: '把数据中心搬上轨道的太空计算方案。卫星星座搭载抗辐射 AI 芯片，以太阳能供电、向深空散热，经星间激光链路组成在轨算力网络；数据就地处理、仅回传结果，突破地面算力的能源与带宽瓶颈。',
+    },
+    features: [
+      {
+        en: 'Clean, near-continuous solar power with a low carbon footprint',
+        zh: '全天候太阳能供电，清洁低碳',
+      },
+      {
+        en: 'Natural deep-space cooling — no water, no land',
+        zh: '深空天然散热，不耗水、不占地',
+      },
+      {
+        en: 'Compute at the source — real-time in-orbit inference, minimal downlink',
+        zh: '数据即采即算，在轨实时推理，大幅节省下行带宽',
+      },
+      {
+        en: 'Laser-linked constellation that scales compute on demand',
+        zh: '星间激光组网，算力按需弹性扩展',
+      },
+    ],
+    media: {
+      images: [
+        'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1280&q=80&auto=format&fit=crop',
+      ],
+    },
+    downloadLink: '/assets/downloads/space-computing-whitepaper.pdf',
+    downloadLabel: { en: 'White Paper (PDF)', zh: '白皮书 (PDF)' },
+  },
+  {
+    id: 'smart-light-rail',
+    index: '04',
     title: {
       en: 'Smart Light Rail Monitoring System',
       zh: '智慧轻轨监测系统',
@@ -91,34 +132,5 @@ export const PROJECTS: Project[] = [
     downloadLabel: { en: 'Solution Deck (PPT)', zh: '解决方案 (PPT)' },
     siteLink: 'https://smartail.vercel.app/',
     siteLinkLabel: { en: 'Visit Project Homepage', zh: '访问项目主页' },
-  },
-  {
-    id: 'maintenance-app',
-    index: '04',
-    title: {
-      en: 'Maintenance & Troubleshooting App',
-      zh: '维保排障应用',
-    },
-    tagline: {
-      en: 'Field-service agent turning AI insights into work orders',
-      zh: '将 AI 洞察转化为工单的一线服务智能体',
-    },
-    description: {
-      en: 'A field-service agent that converts AI insights into actionable work orders. Technicians receive guided troubleshooting steps, AR-assisted part identification, and one-tap work order execution — closing the loop from detection to resolution.',
-      zh: '一款将 AI 洞察转化为可执行工单的一线服务智能体。技术人员可获得引导式排障步骤、AR 辅助部件识别与一键工单执行能力，实现从故障发现到解决的闭环。',
-    },
-    features: [
-      { en: 'AI-generated actionable work orders', zh: 'AI 自动生成可执行工单' },
-      { en: 'Guided troubleshooting workflows', zh: '引导式排障工作流' },
-      { en: 'AR-assisted part identification', zh: 'AR 辅助部件识别' },
-      { en: 'Offline-first mobile experience', zh: '离线优先的移动端体验' },
-    ],
-    media: {
-      images: [
-        'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1280&q=80&auto=format&fit=crop',
-      ],
-    },
-    downloadLink: '/assets/downloads/maintenance-app-demo.apk',
-    downloadLabel: { en: 'Demo App (APK)', zh: '演示应用 (APK)' },
   },
 ];
