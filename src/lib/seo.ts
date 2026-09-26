@@ -30,6 +30,7 @@ export async function buildMetadata(locale: Locale): Promise<Metadata> {
       'Experimental Projects',
       'AI Decision System',
       'Graph World Model',
+      'Space Computing',
       'Smart Railway',
       'Predictive Maintenance',
       'Investment',

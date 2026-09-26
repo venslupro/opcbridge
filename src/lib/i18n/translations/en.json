@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "OPC Bridge — Experimental OPC Initiatives Showcase",
-    "description": "The official showcase platform for OPC experimental initiatives: AI decision intelligence, graph world models, smart rail monitoring, and maintenance agents."
+    "description": "The official showcase platform for OPC experimental initiatives: AI decision intelligence, graph world models, space computing, and smart rail monitoring."
   },
   "nav": {
     "projects": "Projects",
@@ -25,7 +25,7 @@
   "projects": {
     "sectionBadge": "Flagship Portfolio",
     "sectionTitle": "Experimental OPC Projects",
-    "sectionSubtitle": "Each project demonstrates a production-ready capability — from data fusion platforms to field-service agents — built to attract global investment.",
+    "sectionSubtitle": "Each project demonstrates a production-ready capability — from data fusion platforms to orbital compute networks — built to attract global investment.",
     "keyFeatures": "Key Features",
     "download": "Download",
     "visitSite": "Visit Site",
