@@ -73,25 +73,25 @@ export const PROJECTS: Project[] = [
       zh: '构建在轨算力——把数据中心送上太空',
     },
     description: {
-      en: 'A space computing solution that answers how to deliver compute power in orbit. Satellite constellations carrying radiation-tolerant AI accelerators are powered by near-continuous solar energy and cooled by radiating heat into deep space, then interconnected by inter-satellite laser links into a distributed orbital computing network. Data is processed where it is collected, and only insights are sent back to Earth — breaking the power, cooling, and bandwidth limits of terrestrial data centers.',
-      zh: '一套回答“如何实现太空算力”的太空计算方案：在卫星星座上部署抗辐射 AI 加速芯片，利用近乎不间断的太阳能供电、向深空辐射散热，并通过星间激光链路组网，构建分布式在轨计算网络。数据在采集处就地处理，仅将结果回传地面，突破地面数据中心在能源、散热与带宽上的瓶颈。',
+      en: 'A space computing solution that moves the data center into orbit. Satellite constellations carry radiation-hardened AI chips powered by solar energy and cooled by deep space, linked by inter-satellite lasers into an orbital compute network — processing data at the source and sending back only results, free of the energy, cooling, and bandwidth limits of ground-based compute.',
+      zh: '把数据中心搬上轨道的太空计算方案。卫星星座搭载抗辐射 AI 芯片，以太阳能供电、向深空散热，经星间激光链路组成在轨算力网络；数据就地处理、仅回传结果，突破地面算力的能源与带宽瓶颈。',
     },
     features: [
       {
-        en: 'Radiation-tolerant on-orbit AI computing nodes',
-        zh: '抗辐射加固的在轨 AI 计算节点',
+        en: 'Clean, near-continuous solar power with a low carbon footprint',
+        zh: '全天候太阳能供电，清洁低碳',
       },
       {
-        en: 'Solar power & deep-space radiative cooling',
-        zh: '太阳能供电与深空辐射散热',
+        en: 'Natural deep-space cooling — no water, no land',
+        zh: '深空天然散热，不耗水、不占地',
       },
       {
-        en: 'Inter-satellite laser links forming a compute constellation',
-        zh: '星间激光链路组网的算力星座',
+        en: 'Compute at the source — real-time in-orbit inference, minimal downlink',
+        zh: '数据即采即算，在轨实时推理，大幅节省下行带宽',
       },
       {
-        en: 'Space-ground collaborative scheduling & in-orbit inference',
-        zh: '天地协同算力调度与在轨实时推理',
+        en: 'Laser-linked constellation that scales compute on demand',
+        zh: '星间激光组网，算力按需弹性扩展',
       },
     ],
     media: {
