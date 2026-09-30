@@ -45,18 +45,21 @@ Copy the example file and adjust values as needed:
 cp .env.example .env.local
 ```
 
-| Variable               | Description                                        | Default                         |
-| ---------------------- | -------------------------------------------------- | ------------------------------- |
-| `NEXT_PUBLIC_SITE_URL` | Public site URL (for SEO metadata)                 | `https://opcbridge.vercel.app`  |
-| `CONTACT_EMAIL`        | Contact email displayed on site                    | `venslu.pro@gmail.com`          |
-| `ONTODECIDE_SITE_URL`  | Homepage of AI-Powered Intelligent Decision System | `https://ontodecide.vercel.app` |
-| `GRAPHVERSE_SITE_URL`  | Homepage of Graph World Model                      | `https://graphverse.vercel.app` |
-| `STARWEAVE_SITE_URL`   | Homepage of Space Computing Technology             | `https://starweave.vercel.app`  |
-| `SMARTRAIL_SITE_URL`   | Homepage of Smart Light Rail Monitoring System     | `https://smartrail.vercel.app`  |
+| Variable        | Description                                    | Default                |
+| --------------- | ---------------------------------------------- | ---------------------- |
+| `SITE_DOMAIN`   | Root domain for the site and project homepages | `opcbridge.top`        |
+| `CONTACT_EMAIL` | Contact email displayed on site                | `venslu.pro@gmail.com` |
 
-Each project declares a `siteName` in `src/lib/constants/projects.ts`. Its homepage defaults to `https://<siteName>.vercel.app` and can be overridden with `<SITENAME>_SITE_URL`.
+The main site is served at `https://www.<SITE_DOMAIN>` (used for SEO metadata, sitemap and robots). Each project declares a `siteName` in `src/lib/constants/projects.ts`, and its homepage is `https://<siteName>.<SITE_DOMAIN>`, e.g. `https://ontodecide.opcbridge.top`.
 
-All variables are optional and fall back to the defaults above. They are read at build time, so redeploy after changing them (on Vercel: _Settings → Environment Variables_, then redeploy).
+| Project                                | `siteName`   |
+| -------------------------------------- | ------------ |
+| AI-Powered Intelligent Decision System | `ontodecide` |
+| Graph World Model                      | `graphverse` |
+| Space Computing Technology             | `starweave`  |
+| Smart Light Rail Monitoring System     | `smartrail`  |
+
+Both variables are optional. They are read at build time, so redeploy after changing them (on Vercel: _Settings → Environment Variables_, then redeploy).
 
 ### Development
 

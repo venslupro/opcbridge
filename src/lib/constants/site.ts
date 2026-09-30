@@ -1,9 +1,20 @@
-import { normalizeUrl } from '@/lib/utils/url';
-
 export const SITE_NAME = 'OPC Bridge';
 
 export const CONTACT_EMAIL = process.env.CONTACT_EMAIL?.trim() || 'venslu.pro@gmail.com';
 
-// Normalized without a trailing slash so callers can append paths like `${SITE_URL}/sitemap.xml`.
-export const SITE_URL =
-  normalizeUrl(process.env.NEXT_PUBLIC_SITE_URL) ?? 'https://opcbridge.vercel.app';
+/**
+ * Root domain the site and all project homepages live under, e.g. `opcbridge.top`.
+ * Tolerates a pasted URL: scheme, `www.`, path and trailing slashes are stripped.
+ */
+export const SITE_DOMAIN =
+  process.env.SITE_DOMAIN?.trim()
+    .replace(/^[a-z][a-z0-9+.-]*:\/\//i, '')
+    .replace(/^www\./i, '')
+    .replace(/\/.*$/, '') || 'opcbridge.top';
+
+export const SITE_URL = `https://www.${SITE_DOMAIN}`;
+
+/** Project homepage on its own subdomain, e.g. `ontodecide` -> `https://ontodecide.opcbridge.top`. */
+export function projectSiteUrl(siteName: string): string {
+  return `https://${siteName}.${SITE_DOMAIN}`;
+}
