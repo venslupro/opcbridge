@@ -54,7 +54,9 @@ cp .env.example .env.local
 | `STARWEAVE_SITE_URL`   | Homepage of Space Computing Technology             | `https://starweave.vercel.app`  |
 | `SMARTRAIL_SITE_URL`   | Homepage of Smart Light Rail Monitoring System     | `https://smartrail.vercel.app`  |
 
-Each project declares a `siteName` in `src/lib/constants/projects.ts`. Its homepage defaults to `https://<siteName>.vercel.app` and can be overridden with `<SITENAME>_SITE_URL`. URLs are resolved at build time, so redeploy after changing them (on Vercel: _Settings → Environment Variables_, then redeploy).
+Each project declares a `siteName` in `src/lib/constants/projects.ts`. Its homepage defaults to `https://<siteName>.vercel.app` and can be overridden with `<SITENAME>_SITE_URL`.
+
+All variables are optional and fall back to the defaults above. They are read at build time, so redeploy after changing them (on Vercel: _Settings → Environment Variables_, then redeploy).
 
 ### Development
 
