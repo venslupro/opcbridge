@@ -3,6 +3,7 @@ import 'server-only';
 import type { Project } from '@/types';
 
 import { PROJECTS } from '@/lib/constants/projects';
+import { normalizeUrl } from '@/lib/utils/url';
 
 /** Env var that overrides a project's homepage, e.g. `ontodecide` -> `ONTODECIDE_SITE_URL`. */
 export function siteUrlEnvKey(siteName: string): string {
@@ -11,8 +12,7 @@ export function siteUrlEnvKey(siteName: string): string {
 
 /** Homepage URL: `<NAME>_SITE_URL` if set, otherwise `https://<name>.vercel.app`. */
 export function resolveSiteLink(siteName: string): string {
-  const override = process.env[siteUrlEnvKey(siteName)]?.trim();
-  return override || `https://${siteName}.vercel.app`;
+  return normalizeUrl(process.env[siteUrlEnvKey(siteName)]) ?? `https://${siteName}.vercel.app`;
 }
 
 const projectsCache: readonly Project[] = PROJECTS.map((project) => ({
