@@ -203,16 +203,24 @@ ul {
 }
 
 .language-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 6px 14px;
   font-size: 0.82rem;
-  color: var(--color-text-muted);
+  font-weight: 500;
+  color: var(--color-text);
   transition: all 0.2s ease;
 }
 
-.language-option.active {
-  background: var(--gradient-primary);
-  color: #fff;
-  font-weight: 600;
+.language-icon {
+  flex-shrink: 0;
+}
+
+.language-option:hover,
+.language-option:focus-visible {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 /* ---------- CTA Button ---------- */

@@ -3,6 +3,7 @@ import type { Project } from '@/types';
 export const PROJECTS: Project[] = [
   {
     id: 'ai-decision',
+    siteName: 'ontodecide',
     index: '01',
     title: {
       en: 'AI-Powered Intelligent Decision System',
@@ -29,11 +30,10 @@ export const PROJECTS: Project[] = [
     },
     downloadLink: '/assets/downloads/ai-decision-whitepaper.pdf',
     downloadLabel: { en: 'White Paper (PDF)', zh: '白皮书 (PDF)' },
-    siteLink: 'https://ontodecide.vercel.app/',
-    siteLinkLabel: { en: 'Visit Project Homepage', zh: '访问项目主页' },
   },
   {
     id: 'graph-world-model',
+    siteName: 'graphverse',
     index: '02',
     title: {
       en: 'Graph World Model',
@@ -60,11 +60,10 @@ export const PROJECTS: Project[] = [
     },
     downloadLink: '/assets/downloads/graph-world-model-whitepaper.pdf',
     downloadLabel: { en: 'White Paper (PDF)', zh: '白皮书 (PDF)' },
-    siteLink: 'https://grapherse.vercel.app/',
-    siteLinkLabel: { en: 'Visit Project Homepage', zh: '访问项目主页' },
   },
   {
     id: 'space-computing',
+    siteName: 'starweave',
     index: '03',
     title: {
       en: 'Space Computing Technology',
@@ -106,6 +105,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'smart-light-rail',
+    siteName: 'smartrail',
     index: '04',
     title: {
       en: 'Smart Light Rail Monitoring System',
@@ -132,7 +132,5 @@ export const PROJECTS: Project[] = [
     },
     downloadLink: '/assets/downloads/smart-light-rail-solution.pptx',
     downloadLabel: { en: 'Solution Deck (PPT)', zh: '解决方案 (PPT)' },
-    siteLink: 'https://smartail.vercel.app/',
-    siteLinkLabel: { en: 'Visit Project Homepage', zh: '访问项目主页' },
   },
 ];

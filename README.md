@@ -14,15 +14,15 @@ OPC Bridge is a bilingual (Chinese / English) marketing website that showcases f
 
 ## Tech Stack
 
-| Category        | Technology                                      |
-| --------------- | ----------------------------------------------- |
-| Framework       | Next.js 15 (App Router)                         |
-| Language        | TypeScript 5 (strict mode)                      |
-| Styling         | CSS Modules / global CSS                        |
-| Package manager | pnpm 8                                          |
-| Linting         | ESLint (next/core-web-vitals, next/typescript)  |
-| Formatting      | Prettier                                        |
-| Deployment      | Vercel                                          |
+| Category        | Technology                                     |
+| --------------- | ---------------------------------------------- |
+| Framework       | Next.js 15 (App Router)                        |
+| Language        | TypeScript 5 (strict mode)                     |
+| Styling         | CSS Modules / global CSS                       |
+| Package manager | pnpm 8                                         |
+| Linting         | ESLint (next/core-web-vitals, next/typescript) |
+| Formatting      | Prettier                                       |
+| Deployment      | Vercel                                         |
 
 ## Getting Started
 
@@ -45,10 +45,16 @@ Copy the example file and adjust values as needed:
 cp .env.example .env.local
 ```
 
-| Variable              | Description                        | Default                          |
-| --------------------- | ---------------------------------- | -------------------------------- |
-| `NEXT_PUBLIC_SITE_URL` | Public site URL (for SEO metadata) | `https://opcbridge.vercel.app`  |
-| `CONTACT_EMAIL`        | Contact email displayed on site    | `venslu.pro@gmail.com`          |
+| Variable               | Description                                        | Default                         |
+| ---------------------- | -------------------------------------------------- | ------------------------------- |
+| `NEXT_PUBLIC_SITE_URL` | Public site URL (for SEO metadata)                 | `https://opcbridge.vercel.app`  |
+| `CONTACT_EMAIL`        | Contact email displayed on site                    | `venslu.pro@gmail.com`          |
+| `ONTODECIDE_SITE_URL`  | Homepage of AI-Powered Intelligent Decision System | `https://ontodecide.vercel.app` |
+| `GRAPHVERSE_SITE_URL`  | Homepage of Graph World Model                      | `https://graphverse.vercel.app` |
+| `STARWEAVE_SITE_URL`   | Homepage of Space Computing Technology             | `https://starweave.vercel.app`  |
+| `SMARTRAIL_SITE_URL`   | Homepage of Smart Light Rail Monitoring System     | `https://smartrail.vercel.app`  |
+
+Each project declares a `siteName` in `src/lib/constants/projects.ts`. Its homepage defaults to `https://<siteName>.vercel.app` and can be overridden with `<SITENAME>_SITE_URL`. URLs are resolved at build time, so redeploy after changing them (on Vercel: _Settings → Environment Variables_, then redeploy).
 
 ### Development
 
@@ -60,13 +66,13 @@ The site will be available at <http://localhost:3000>.
 
 ## Scripts
 
-| Script            | Description                          |
-| ----------------- | ------------------------------------ |
-| `pnpm dev`        | Start the development server         |
-| `pnpm build`      | Create a production build            |
-| `pnpm start`      | Start the production server          |
-| `pnpm lint`       | Run ESLint                           |
-| `pnpm type-check` | Run TypeScript type checking (tsc)   |
+| Script            | Description                        |
+| ----------------- | ---------------------------------- |
+| `pnpm dev`        | Start the development server       |
+| `pnpm build`      | Create a production build          |
+| `pnpm start`      | Start the production server        |
+| `pnpm lint`       | Run ESLint                         |
+| `pnpm type-check` | Run TypeScript type checking (tsc) |
 
 ## Build & Deployment
 
