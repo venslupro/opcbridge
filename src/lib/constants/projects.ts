@@ -60,6 +60,8 @@ export const PROJECTS: Project[] = [
     },
     downloadLink: '/assets/downloads/graph-world-model-whitepaper.pdf',
     downloadLabel: { en: 'White Paper (PDF)', zh: '白皮书 (PDF)' },
+    siteLink: 'https://grapherse.vercel.app/',
+    siteLinkLabel: { en: 'Visit Project Homepage', zh: '访问项目主页' },
   },
   {
     id: 'space-computing',
