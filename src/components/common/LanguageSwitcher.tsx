@@ -24,18 +24,18 @@ export function LanguageSwitcher({ locale, label }: LanguageSwitcherProps) {
     return `/${segments.join('/')}`;
   }
 
+  // Show the language the user can switch to, not the current one.
+  const target = LOCALES.find((item) => item !== locale) ?? locale;
+
   return (
-    <div className="language-switcher" aria-label={label}>
-      {LOCALES.map((item) => (
-        <Link
-          key={item}
-          href={buildHref(item)}
-          className={`language-option${item === locale ? ' active' : ''}`}
-          aria-current={item === locale ? 'true' : undefined}
-        >
-          {LOCALE_LABELS[item]}
-        </Link>
-      ))}
-    </div>
+    <Link
+      href={buildHref(target)}
+      className="language-switcher language-option"
+      hrefLang={target}
+      lang={target}
+      aria-label={`${label}: ${LOCALE_LABELS[target]}`}
+    >
+      {LOCALE_LABELS[target]}
+    </Link>
   );
 }

@@ -209,10 +209,10 @@ ul {
   transition: all 0.2s ease;
 }
 
-.language-option.active {
-  background: var(--gradient-primary);
-  color: #fff;
-  font-weight: 600;
+.language-option:hover,
+.language-option:focus-visible {
+  border-color: var(--color-primary);
+  color: var(--color-text);
 }
 
 /* ---------- CTA Button ---------- */

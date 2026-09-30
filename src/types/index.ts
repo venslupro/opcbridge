@@ -19,8 +19,10 @@ export interface Project {
   media: ProjectMedia;
   downloadLink: string;
   downloadLabel: LocalizedString;
+  /** Project name used to build its homepage URL and env var, e.g. `ontodecide`. */
+  siteName: string;
+  /** Resolved homepage URL, filled in by the data layer. */
   siteLink?: string;
-  siteLinkLabel?: LocalizedString;
 }
 
 export interface HeroStat {

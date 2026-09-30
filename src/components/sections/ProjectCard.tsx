@@ -9,6 +9,7 @@ interface ProjectCardProps {
   readonly tabImage: string;
   readonly tabVideo: string;
   readonly _downloadLabel: string;
+  readonly visitSiteLabel: string;
   readonly reversed: boolean;
 }
 
@@ -18,11 +19,11 @@ export function ProjectCard({
   keyFeaturesLabel,
   tabImage,
   tabVideo,
+  visitSiteLabel,
   reversed,
 }: ProjectCardProps) {
   const title = localize(project.title, locale);
   const videos = project.media.videos ?? [];
-  const hasSiteLink = Boolean(project.siteLink && project.siteLinkLabel);
 
   return (
     <article className={`project-card${reversed ? ' reversed' : ''}`} id={project.id}>
@@ -48,19 +49,19 @@ export function ProjectCard({
             ))}
           </ul>
         </div>
-        {hasSiteLink && project.siteLink && project.siteLinkLabel ? (
+        {project.siteLink ? (
           <div className="project-actions">
             <a
               href={project.siteLink}
               target="_blank"
               rel="noopener noreferrer"
               className="project-visit-site"
-              aria-label={`${localize(project.siteLinkLabel, locale)} — ${title}`}
+              aria-label={`${visitSiteLabel} — ${title}`}
             >
               <span className="visit-site-icon" aria-hidden="true">
                 ↗
               </span>
-              {localize(project.siteLinkLabel, locale)}
+              {visitSiteLabel}
             </a>
           </div>
         ) : null}
