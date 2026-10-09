@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { Inter, Noto_Sans_SC } from 'next/font/google';
 
 import { Footer } from '@/components/common/Footer';
 import { Header } from '@/components/common/Header';
@@ -9,8 +10,6 @@ import { getAllLocales, getDictionary } from '@/lib/i18n/get-dictionary';
 import { buildAllSchemaLd, buildMetadata } from '@/lib/seo';
 
 import '../globals.css';
-
-import { Inter, Noto_Sans_SC } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 const notoSansSC = Noto_Sans_SC({
@@ -34,13 +33,13 @@ export async function generateMetadata({
   readonly params: Promise<{ readonly locale: string }>;
 }) {
   const { locale: rawLocale } = await params;
-  const locale = await ensureLocale(rawLocale);
+  const locale = ensureLocale(rawLocale);
   return buildMetadata(locale);
 }
 
 export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
   const { locale: rawLocale } = await params;
-  const locale = await ensureLocale(rawLocale);
+  const locale = ensureLocale(rawLocale);
   const dict = await getDictionary(locale);
   const jsonLd = buildAllSchemaLd(locale);
 

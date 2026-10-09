@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import type { DictionaryFooter } from '@/types';
 import { CONTACT_EMAIL } from '@/lib/constants/site';
 
@@ -13,7 +15,7 @@ export function Footer({ footer, siteName }: FooterProps) {
     <footer className="site-footer">
       <div className="container footer-inner">
         <div className="footer-brand">
-          <img src="/icon.svg" alt={siteName} className="logo-image" width="32" height="32" />
+          <Image src="/icon.svg" alt={siteName} className="logo-image" width={32} height={32} />
           <span className="logo-text">{siteName}</span>
           <p className="footer-tagline">{footer.tagline}</p>
         </div>

@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import type { DictionaryHero, Locale } from '@/types';
 import { CTAButton } from '@/components/common/CTAButton';
 
@@ -17,7 +19,7 @@ export function Hero({ locale, hero }: HeroProps) {
       <div className="container hero-content">
         <span className="hero-badge animate-fade-up">{hero.badge}</span>
         <div className="hero-logo-wrapper animate-fade-up delay-1">
-          <img src="/icon.svg" alt="OPC Bridge" className="hero-logo" width="120" height="120" />
+          <Image src="/icon.svg" alt="OPC Bridge" className="hero-logo" width={120} height={120} />
         </div>
         <h1 className="hero-title animate-fade-up delay-2">
           {hero.titleLine1}

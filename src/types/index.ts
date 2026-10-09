@@ -17,8 +17,6 @@ export interface Project {
   description: LocalizedString;
   features: LocalizedString[];
   media: ProjectMedia;
-  downloadLink: string;
-  downloadLabel: LocalizedString;
   /** Project name used to build its homepage URL and env var, e.g. `ontodecide`. */
   siteName: string;
   /** Resolved homepage URL, filled in by the data layer. */
@@ -54,7 +52,6 @@ export interface Dictionary {
     sectionTitle: string;
     sectionSubtitle: string;
     keyFeatures: string;
-    download: string;
     visitSite: string;
     tabImage: string;
     tabVideo: string;

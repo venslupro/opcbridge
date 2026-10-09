@@ -8,7 +8,6 @@ interface ProjectCardProps {
   readonly keyFeaturesLabel: string;
   readonly tabImage: string;
   readonly tabVideo: string;
-  readonly _downloadLabel: string;
   readonly visitSiteLabel: string;
   readonly reversed: boolean;
 }

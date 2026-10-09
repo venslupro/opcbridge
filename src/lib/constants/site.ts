@@ -2,19 +2,26 @@ export const SITE_NAME = 'OPC Bridge';
 
 export const CONTACT_EMAIL = process.env.CONTACT_EMAIL?.trim() || 'venslu.pro@gmail.com';
 
-/**
- * Root domain the site and all project homepages live under, e.g. `opcbridge.top`.
- * Tolerates a pasted URL: scheme, `www.`, path and trailing slashes are stripped.
- */
-export const SITE_DOMAIN =
-  process.env.SITE_DOMAIN?.trim()
-    .replace(/^[a-z][a-z0-9+.-]*:\/\//i, '')
-    .replace(/^www\./i, '')
-    .replace(/\/.*$/, '') || 'opcbridge.top';
+export const SITE_URL =
+  process.env.SITE_URL?.trim().replace(/\/+$/, '') || 'https://opcbridge.vercel.app';
 
-export const SITE_URL = `https://www.${SITE_DOMAIN}`;
+export const ONTODECIDE_URL =
+  process.env.ONTODECIDE_URL?.trim().replace(/\/+$/, '') || 'https://ontodecide.vercel.app';
+export const GRAPHVERSE_URL =
+  process.env.GRAPHVERSE_URL?.trim().replace(/\/+$/, '') || 'https://graphverse.vercel.app';
+export const STARWEAVE_URL =
+  process.env.STARWEAVE_URL?.trim().replace(/\/+$/, '') || 'https://starweave.vercel.app';
+export const SMARTRAIL_URL =
+  process.env.SMARTRAIL_URL?.trim().replace(/\/+$/, '') || 'https://smartrail.vercel.app';
 
-/** Project homepage on its own subdomain, e.g. `ontodecide` -> `https://ontodecide.opcbridge.top`. */
+const PROJECT_URLS: Record<string, string> = {
+  ontodecide: ONTODECIDE_URL,
+  graphverse: GRAPHVERSE_URL,
+  starweave: STARWEAVE_URL,
+  smartrail: SMARTRAIL_URL,
+};
+
+/** Project homepage URL by siteName, resolved from environment variables. */
 export function projectSiteUrl(siteName: string): string {
-  return `https://${siteName}.${SITE_DOMAIN}`;
+  return PROJECT_URLS[siteName] ?? `https://${siteName}.vercel.app`;
 }
