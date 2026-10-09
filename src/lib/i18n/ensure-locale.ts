@@ -6,10 +6,9 @@ import type { Locale } from '@/types';
 
 import { isLocale } from './config';
 
-export async function ensureLocale(rawLocale: string | undefined): Promise<Locale> {
+export function ensureLocale(rawLocale: string | undefined): Locale {
   if (rawLocale === undefined || !isLocale(rawLocale)) {
     notFound();
   }
-  const locale: Locale = rawLocale;
-  return locale;
+  return rawLocale;
 }

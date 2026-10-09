@@ -27,7 +27,6 @@ export async function ProjectsGrid({ locale, projects }: ProjectsGridProps) {
               keyFeaturesLabel={projects.keyFeatures}
               tabImage={projects.tabImage}
               tabVideo={projects.tabVideo}
-              _downloadLabel={projects.download}
               visitSiteLabel={projects.visitSite}
               reversed={index % 2 === 1}
             />

@@ -28,8 +28,6 @@ export const PROJECTS: Project[] = [
         'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1280&q=80&auto=format&fit=crop',
       ],
     },
-    downloadLink: '/assets/downloads/ai-decision-whitepaper.pdf',
-    downloadLabel: { en: 'White Paper (PDF)', zh: '白皮书 (PDF)' },
   },
   {
     id: 'graph-world-model',
@@ -58,8 +56,6 @@ export const PROJECTS: Project[] = [
         'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1280&q=80&auto=format&fit=crop',
       ],
     },
-    downloadLink: '/assets/downloads/graph-world-model-whitepaper.pdf',
-    downloadLabel: { en: 'White Paper (PDF)', zh: '白皮书 (PDF)' },
   },
   {
     id: 'space-computing',
@@ -100,8 +96,6 @@ export const PROJECTS: Project[] = [
         'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1280&q=80&auto=format&fit=crop',
       ],
     },
-    downloadLink: '/assets/downloads/space-computing-whitepaper.pdf',
-    downloadLabel: { en: 'White Paper (PDF)', zh: '白皮书 (PDF)' },
   },
   {
     id: 'smart-light-rail',
@@ -130,7 +124,5 @@ export const PROJECTS: Project[] = [
         'https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=1280&q=80&auto=format&fit=crop',
       ],
     },
-    downloadLink: '/assets/downloads/smart-light-rail-solution.pptx',
-    downloadLabel: { en: 'Solution Deck (PPT)', zh: '解决方案 (PPT)' },
   },
 ];

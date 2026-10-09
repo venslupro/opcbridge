@@ -10,7 +10,7 @@ interface HomePageProps {
 
 export default async function HomePage({ params }: HomePageProps) {
   const { locale: rawLocale } = await params;
-  const locale = await ensureLocale(rawLocale);
+  const locale = ensureLocale(rawLocale);
   const dict = await getDictionary(locale);
 
   return (

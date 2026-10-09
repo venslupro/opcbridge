@@ -102,11 +102,6 @@ export function buildWebSiteSchema({
     name: siteName,
     url: siteUrl,
     inLanguage: locale,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${siteUrl}/?q={search_term_string}`,
-      'query-input': 'required name=search_term_string',
-    },
   };
 }
 

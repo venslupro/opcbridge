@@ -1,14 +1,10 @@
 'use client';
 
-import type { ComponentType, ReactElement } from 'react';
+import type { ReactElement } from 'react';
 import { useState } from 'react';
+import Image from 'next/image';
 
 type MediaType = 'image' | 'video';
-
-interface MediaRendererProps {
-  readonly src: string;
-  readonly alt: string;
-}
 
 interface MediaTab {
   readonly type: MediaType;
@@ -17,7 +13,7 @@ interface MediaTab {
 }
 
 function renderImage(src: string, alt: string): ReactElement {
-  return <img className="media-image" src={src} alt={alt} loading="lazy" decoding="async" />;
+  return <Image className="media-image" src={src} alt={alt} fill sizes="100vw" />;
 }
 
 function renderVideo(src: string, alt: string): ReactElement {
@@ -33,24 +29,12 @@ function renderVideo(src: string, alt: string): ReactElement {
   );
 }
 
-const DEFAULT_REGISTRY: Record<MediaType, ComponentType<MediaRendererProps>> = {
-  image: function ImageRenderer({ src, alt }: MediaRendererProps): ReactElement {
-    return renderImage(src, alt);
-  },
-  video: function VideoRenderer({ src, alt }: MediaRendererProps): ReactElement {
-    return renderVideo(src, alt);
-  },
-};
-
-export type MediaRendererRegistry = Partial<Record<MediaType, ComponentType<MediaRendererProps>>>;
-
 interface MediaViewerProps {
   readonly images: readonly string[];
   readonly videos: readonly string[];
   readonly alt: string;
   readonly tabImage: string;
   readonly tabVideo: string;
-  readonly registryOverride?: MediaRendererRegistry;
 }
 
 function pickFirst(items: readonly string[]): string | undefined {
@@ -63,7 +47,6 @@ export function MediaViewer({
   alt,
   tabImage,
   tabVideo,
-  registryOverride,
 }: MediaViewerProps): ReactElement {
   const hasVideo = videos.length > 0;
   const [tab, setTab] = useState<MediaType>('image');
@@ -90,11 +73,7 @@ export function MediaViewer({
 
   const activeSrc = activeMedia?.type === 'video' ? pickFirst(videos) : pickFirst(images);
 
-  const renderer =
-    registryOverride?.[activeMedia?.type ?? 'image'] ??
-    DEFAULT_REGISTRY[activeMedia?.type ?? 'image'];
-
-  if (activeMedia === undefined || activeSrc === undefined || renderer === undefined) {
+  if (activeMedia === undefined || activeSrc === undefined) {
     const fallbackSrc = pickFirst(images);
     if (fallbackSrc === undefined) {
       return <div className="media-viewer media-viewer-empty" />;
@@ -105,8 +84,6 @@ export function MediaViewer({
       </div>
     );
   }
-
-  const RendererComponent = renderer;
 
   return (
     <div className="media-viewer">
@@ -126,9 +103,7 @@ export function MediaViewer({
           ))}
         </div>
       )}
-      <div className="media-frame">
-        <RendererComponent src={activeSrc} alt={alt} />
-      </div>
+      <div className="media-frame">{activeMedia.render(activeSrc, alt)}</div>
     </div>
   );
 }

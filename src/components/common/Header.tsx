@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import type { DictionaryLanguageSwitcher, DictionaryNav, Locale } from '@/types';
@@ -16,7 +17,7 @@ export function Header({ locale, nav, languageSwitcher, siteName }: HeaderProps)
       <div className="container header-inner">
         <div className="header-left">
           <Link href={`/${locale}`} className="logo">
-            <img src="/icon.svg" alt={siteName} className="logo-image" width="36" height="36" />
+            <Image src="/icon.svg" alt={siteName} className="logo-image" width={36} height={36} />
             <span className="logo-text">{siteName}</span>
           </Link>
           <nav className="nav">
