@@ -93,7 +93,7 @@ cp .env.example .env.local
 | `STARWEAVE_URL`  | Homepage of the Space Computing project          | `https://starweave.vercel.app`  |
 | `SMARTRAIL_URL`  | Homepage of the Smart Light Rail project         | `https://smartrail.vercel.app`  |
 
-Values are read at build time. In production, `SITE_URL` is set to `https://www.opcbridge.top`; change it only together with the deployment, then rebuild — canonicals, hreflang, and the sitemap are generated from it.
+Values are read at build time. Set `SITE_URL` to the public URL of your deployment, then rebuild — canonicals, hreflang, and the sitemap are all generated from it.
 
 ### Run Locally
 
