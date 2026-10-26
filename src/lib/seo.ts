@@ -17,6 +17,7 @@ export async function buildMetadata(locale: Locale): Promise<Metadata> {
   for (const l of locales) {
     alternatesLanguages[l] = `/${l}`;
   }
+  alternatesLanguages['x-default'] = '/en';
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -82,7 +83,7 @@ export async function buildMetadata(locale: Locale): Promise<Metadata> {
       languages: alternatesLanguages,
     },
     verification: {
-      google: 'w4jJfM2FK6kCLlmnpZdnVa17ByyfQmDT8Q5WFxUMT9U',
+      google: 'l2XKj8QOH2VEHMkOtvaAAccv7nHUaH6ufCbjGamxIPY',
     },
   };
 }
